@@ -4,6 +4,7 @@ mkdir ~/.ssh
 chmod 700 ~/.ssh
 
 read -s -p "Copy your public key to the clipboard and paste it into the text box. To continue, press any key..." -n 1 response
+echo;
 
 nano ~/.ssh/authorized_keys
 chmod 600 ~/.ssh/authorized_keys
@@ -22,4 +23,4 @@ clear
 
 sudo systemctl reload sshd
 
-echo "SSH configure is success.\n"
+echo "SSH configure is success."
