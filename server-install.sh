@@ -76,3 +76,18 @@ clear
 
 sudo a2enmod rewrite
 sudo service apache2 restart
+clear
+
+sudo apt-get install mariadb-server mariadb-client
+sudo systemctl stop mariadb.service
+sudo systemctl start mariadb.service
+sudo systemctl enable mariadb.service
+sudo mysql_secure_installation
+sudo systemctl restart mariadb.service
+
+sudo add-apt-repository ppa:ondrej/php
+sudo apt-get update
+
+sudo apt-get install php php-pear php-fpm php-dev php-zip php-curl php-xmlrpc php-gd php-mysql php-mbstring php-xml libapache2-mod-php
+sudo service apache2 restart
+
